@@ -50,3 +50,33 @@ This is personal project, built indepently to practice and improve front-end web
 - **Transaction History** - Browse a running log of all recorded transactions.
 - **Responsive Design** - Optimized for both desktop and mobile browsers.
 - **Client-Side Only** - No server or database setup required.
+
+---
+
+## Project Structure
+
+```
+financial-tracker/
+├── index.html      # Main HTML structure
+├── style.css       # Application styling
+├── script.js       # Core JavaScript logic
+└── README.md       # Project documentation
+```
+
+---
+
+## Installation
+
+1. Clone or Download this repository:
+```bash
+   git clone https://github.com/ramutan/financial-trackers.git
+```
+2. Navigate to the project directory:
+```bash
+   cd financial-tracker
+```
+3. Open `index.html` in your preffered web bwoser.
+
+No additional dependencies or build steps are required.
+
+---
