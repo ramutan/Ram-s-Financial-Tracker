@@ -27,6 +27,6 @@ This is personal project, built indepently to practice and improve front-end web
 
 ## Author
 
-**Prince Ram Roydlikent F. Igna**
-**Bachelor of Science in Information Technology specializing in Game Development**
-**University of Perpetual Help System Dalta - Molino Campus**
+- **Prince Ram Roydlikent F. Igna**
+- **Bachelor of Science in Information Technology specializing in Game Development**
+- **University of Perpetual Help System Dalta - Molino Campus**
