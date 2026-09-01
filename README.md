@@ -80,3 +80,21 @@ financial-tracker/
 No additional dependencies or build steps are required.
 
 ---
+
+## Usage
+
+1. Launch the application by opening `index.html`.
+2. Enter transaction details (description, amount, and type).
+3. Click **Add** to log the transaction.
+4. View the updated balance and transaction historyn instantly.
+
+---
+
+## Roadmap
+
+- [] Add data persistence (LocalStorage)
+- [] Implement category-based expense tracking
+- [] Add charts for spending visualization
+- [] Enable export of transaction history (CSV/PDF)
+
+---
