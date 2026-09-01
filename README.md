@@ -14,6 +14,7 @@ A web-based personal finance management application build with HTML, CSS, and Ja
 - [Installation](#installation)
 - [Usage](#usage)
 - [Roadmap](#roadmap)
+- [License](#license)
 
 ---
 
