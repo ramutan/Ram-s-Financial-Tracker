@@ -1,2 +1,6 @@
-# Ram's-Financial-Tracker
-A web-based Financial Tracker that allows users to record their income and expenses, view their overall balance, and monitor their spending habits — built using HTML, CSS, and JavaScript as a way to practice front-end web development and basic financial data handling.
+# Financial Tracker 
+
+A web-based personal finance management application build with HTML, CSS, and JavaScript. This project enables users to record transcations, monitor their balance, and gain insight into their spending habits through a clean, responsive interface.
+
+---
+
