@@ -30,3 +30,23 @@ This is personal project, built indepently to practice and improve front-end web
 - **Prince Ram Roydlikent F. Igna**
 - **Bachelor of Science in Information Technology specializing in Game Development**
 - **University of Perpetual Help System Dalta - Molino Campus**
+
+---
+
+## Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| HTML 5     | Markup and page structures |
+| CSS3       | Styling, layout, and responsiveness |
+| JavaScript | Application Logic and Interactivity |
+
+---
+
+## Features
+
+- **Add Transactions** - Record income and expenses entries.
+- **Balance Summary** - View real-time totals for income, expenses, and net balance.
+- **Transaction History** - Browse a running log of all recorded transactions.
+- **Responsive Design** - Optimized for both desktop and mobile browsers.
+- **Client-Side Only** - No server or database setup required.
