@@ -98,3 +98,7 @@ No additional dependencies or build steps are required.
 - [] Enable export of transaction history (CSV/PDF)
 
 ---
+
+## License 
+
+This is a personal project created for self-learning and skill development purposes.
