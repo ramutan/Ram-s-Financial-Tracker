@@ -62,7 +62,33 @@
             <button type="submit" class="btn-primary">Add Entry</button>
          </form>
 
-    
+         <!-- Table wrap -->
+          <div class="table-wrap"
+            <table class="autit-table">
+                <thead>
+                    <tr>
+                        <th>Price (₱)</th>
+                        <th>Date</th>
+                        <th>Category</th>
+                        <th>Note</th>
+                        <th class="right">Price (₱)</th>
+                        <th class="right">Remaining</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody"></tbody>
+            </table>
+            
+            <!-- Empty State Message -->
+            <p id="emptyState" class="empty">No entries yet. Add your first expense above</p>
+            </div>
 
+            <!-- Footer -->
+            <footer class="footer">
+                <button id="exportBtn" class="btn-ghost">Export CSV</button>
+                <button id="clearBtn" class="btn-danger">Clear All</button>
+                <p>&copy; 2026 Ram's Financial Tracker. All rights reserved.</p>
+            </footer>
+        </div>
+        
     </body>
 </html>
