@@ -6,6 +6,53 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Prince Ram Roydlikent F. Igna">
         <meta name="description" content="A web-based personal finance management application build with HTML, CSS, and JavaScript. This project enables users to record transcations, monitor their balance, and gain insight into their spending habits through a clean, responsive interface.">
-        
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
+
+    <body>
+
+        <!-- Main Application Container -->
+        <div class="app">
+         <aside class="sidebar">
+            <div class ="server-icon active" title="Audit">A</div>
+         </aside>
+
+        <!-- Header -->
+         <div class="main">
+            <header class="header">
+              <div class="header-left">
+                <h1>Ram's Financial Tracker</h1>
+                <span class="topic"> Track Your funds, expenses & savings.</span>
+            </div>
+
+        <!-- Funds Box -->
+        <div class="funds-box">
+            <label for ="Total Funds">Total Funds (₱)</label>
+            <input id="totallfunds" type="number" min="0" step="0.01" placeholder="0.00">
+            <button id="setfundsBtn" class="btn-primary">Set Funds</button>
+        </div>
+        </header>
+
+        <!-- This is for the total spent input -->
+        <div class="stats">
+            <div class="stat">
+                <span class="stat-label">Total Spent</span>
+                <span class="stat-value" id="statTotal">₱0.00</span>
+            </div>
+
+            <!-- This is for the total expenses input -->
+            <div class="stat">
+                <span class="stat-label">Total Expenses</span>
+                <span class="stat-value spent" id="statSpent">₱0.00</span>
+            </div>
+
+            <!-- This is for the total savings input -->
+            <div class="stat">
+                <span class="stat-label">Total Savings</span>
+                <span class="stat-value savings" id="statSaved">₱0.00</span>
+            </div>
+        </div>
+
+    </body>
 </html>
