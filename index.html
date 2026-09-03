@@ -1,94 +1,106 @@
-<!Doctype html>
-<html lang = "en">
-    <head>
-        <title>Financial Tracker</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Prince Ram Roydlikent F. Igna">
-        <meta name="description" content="A web-based personal finance management application build with HTML, CSS, and JavaScript. This project enables users to record transcations, monitor their balance, and gain insight into their spending habits through a clean, responsive interface.">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ram's Financial Tracker — Funds, Expenses & Savings</title>
+    <meta name="author" content="Prince Ram Roydlikent F. Igna" />
+    <meta
+      name="description"
+      content="A web-based personal finance manager built with HTML, CSS and JavaScript. Record transactions, monitor your balance and understand your spending habits."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
 
-    <body>
+  <body>
+    <!-- Main application container -->
+    <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="server-icon active" title="Audit">A</div>
+      </aside>
 
-        <!-- Main Application Container -->
-        <div class="app">
-         <aside class="sidebar">
-            <div class ="server-icon active" title="Audit">A</div>
-         </aside>
-
+      <div class="main">
         <!-- Header -->
-         <div class="main">
-            <header class="header">
-              <div class="header-left">
-                <h1>Ram's Financial Tracker</h1>
-                <span class="topic"> Track Your funds, expenses & savings.</span>
-            </div>
+        <header class="header">
+          <div class="header-left">
+            <h1>Ram's Financial Tracker</h1>
+            <span class="topic">Track your funds, expenses &amp; savings.</span>
+          </div>
 
-        <!-- Funds Box -->
-        <div class="funds-box">
-            <label for ="Total Funds">Total Funds (₱)</label>
-            <input id="totallfunds" type="number" min="0" step="0.01" placeholder="0.00">
-            <button id="setfundsBtn" class="btn-primary">Set Funds</button>
-        </div>
+          <!-- Funds box -->
+          <div class="funds-box">
+            <label for="totalfunds">Total Funds (₱)</label>
+            <div class="funds-row">
+              <input id="totalfunds" type="number" min="0" step="0.01" placeholder="0.00" />
+              <button id="setfundsBtn" type="button" class="btn-primary">Set Funds</button>
+            </div>
+          </div>
         </header>
 
-        <!-- This is for the total spent input -->
-        <div class="stats">
-            <div class="stat">
-                <span class="stat-label">Total Spent</span>
-                <span class="stat-value" id="statTotal">₱0.00</span>
-            </div>
+        <!-- Stats -->
+        <section class="stats" aria-label="Summary">
+          <article class="stat">
+            <span class="stat-label">Total Funds</span>
+            <span class="stat-value" id="statTotal">₱0.00</span>
+          </article>
 
-            <!-- This is for the total expenses input -->
-            <div class="stat">
-                <span class="stat-label">Total Expenses</span>
-                <span class="stat-value spent" id="statSpent">₱0.00</span>
-            </div>
+          <article class="stat">
+            <span class="stat-label">Total Expenses</span>
+            <span class="stat-value spent" id="statSpent">₱0.00</span>
+          </article>
 
-            <!-- This is for the total savings input -->
-            <div class="stat">
-                <span class="stat-label">Total Savings</span>
-                <span class="stat-value savings" id="statSaved">₱0.00</span>
-            </div>
+          <article class="stat">
+            <span class="stat-label">Total Savings</span>
+            <span class="stat-value savings" id="statSaved">₱0.00</span>
+          </article>
+        </section>
+
+        <!-- Entry form -->
+        <form id="entryForm" class="entry-form">
+          <input id="price" type="number" min="0" step="0.01" placeholder="Price (₱)" required />
+          <input id="category" type="text" placeholder="Category (e.g., Food, Transport)" required />
+          <input id="note" type="text" placeholder="Note (optional)" />
+          <button type="submit" class="btn-primary">Add Entry</button>
+        </form>
+
+        <!-- Table -->
+        <div class="table-wrap">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Note</th>
+                <th class="right">Price (₱)</th>
+                <th class="right">Remaining</th>
+                <th class="right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tablebody"></tbody>
+          </table>
+
+          <!-- Empty state -->
+          <p id="emptyState" class="empty">No entries yet. Add your first expense above.</p>
         </div>
 
-        <!-- for entry form-->
-         <form id="entryForm" class="entry-form">
-            <input id="price" type="number" min="0" step="0.01" placeholder="Price (₱)"  required>
-            <input id="category" type="text" placeholder="Category (e.g., Food, Transport)" required>
-            <input id="note" type="text" placeholder="Note (optional)">
-            <button type="submit" class="btn-primary">Add Entry</button>
-         </form>
-
-         <!-- Table wrap -->
-          <div class="table-wrap"
-            <table class="autit-table">
-                <thead>
-                    <tr>
-                        <th>Price (₱)</th>
-                        <th>Date</th>
-                        <th>Category</th>
-                        <th>Note</th>
-                        <th class="right">Price (₱)</th>
-                        <th class="right">Remaining</th>
-                    </tr>
-                </thead>
-                <tbody id="tablebody"></tbody>
-            </table>
-            
-            <!-- Empty State Message -->
-            <p id="emptyState" class="empty">No entries yet. Add your first expense above</p>
-            </div>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <button id="exportBtn" class="btn-ghost">Export CSV</button>
-                <button id="clearBtn" class="btn-danger">Clear All</button>
-                <p>&copy; 2026 Ram's Financial Tracker. All rights reserved.</p>
-            </footer>
-        </div>
-        
-    </body>
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="footer-actions">
+            <button id="exportBtn" type="button" class="btn-ghost">Export CSV</button>
+            <button id="clearBtn" type="button" class="btn-danger">Clear All</button>
+          </div>
+          <p>&copy; 2026 Ram's Financial Tracker. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>
